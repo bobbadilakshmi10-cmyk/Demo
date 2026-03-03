@@ -1,0 +1,87 @@
+#pyromid pattern
+
+n=int(input("enter the number:"))
+for i in range(1,n+1):
+    print(" "*(n-i)+"* "*i)
+
+enter the number:4
+   * 
+  * * 
+ * * * 
+* * * * 
+
+#Square pattern
+    
+n=int(input("enter the row:"))
+for i in range(1,n+1):
+    print("* "*n)
+
+enter the row:4
+* * * * 
+* * * * 
+* * * * 
+* * * * 
+
+#Right Angle
+    
+n=int(input("enter the number:"))
+for i in range(1,n+1):
+    print("* "*i)
+
+enter the number:5
+* 
+* * 
+* * * 
+* * * * 
+* * * * *
+    
+#Reverse Angle
+
+n=int(input("enter the number:"))
+for i in range(n,0,-1):
+    print("* "*i)
+enter the number:5
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+while True:
+    gender = input("Enter Gender (Male/Female): ").strip().lower()
+    age = int(input("Enter Age: "))
+
+    ticket_price = 1000.0  # Base price (float)
+
+    if age > 60:
+        if gender == "male":
+            discount = ticket_price * 0.30   # 30% discount
+        elif gender == "female":
+            discount = ticket_price * 0.30 # 40% discount
+        else:
+            print("Invalid gender entered.")
+            discount = 0
+    else:
+        discount = 0  # No discount if age 60 or below
+
+    final_price = ticket_price - discount
+
+    print("\n--- Ticket Details ---")
+    print("Gender:", gender.capitalize())
+    print("Age:", age)
+    print("Original Price:", ticket_price)
+    print("Discount","plus flot free",discount)
+    print("Final Ticket Price:", final_price)
+
+
+
+'''for i in range(3):
+    for j in range(3):
+        print((i+j)%2,end=" ")
+    print()'''
+'''n="A"
+for i in range(3):
+    for j in range(3):
+        print(n,end=" ")
+    print()
+    n=chr(ord(n)+1)'''
